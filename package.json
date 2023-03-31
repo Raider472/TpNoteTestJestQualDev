@@ -1,0 +1,26 @@
+{
+  "name": "r203_jest",
+  "version": "1.0.0",
+  "description": "Dossier de base pour travailler avec JEST",
+  "main": "src/tests/Main.test.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "tests",
+    "qualité",
+    "de",
+    "développement"
+  ],
+  "author": "P. Laroche",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "ts-node": "^10.7.0"
+  }
+}
