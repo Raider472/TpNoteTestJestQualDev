@@ -20,8 +20,10 @@ test("test d'ajout employer", () => {
 
 test("test des setters avec erreurs", () => {
     const d = new Entreprise()
+    expect(() => d.code = "dsf").toThrow(Error)
     expect(() => d.code = "dsqf").toThrow(Error)
     expect(() => d.code = "471").toThrow(Error)
+    expect(() => d.code = "47178").toThrow(Error)
     expect(() => d.nbEmployes = -10).toThrow(Error)
 })
 
