@@ -1,4 +1,3 @@
-import exp from "constants";
 import { DonneesEconomiques } from "../metier/donnees";
 import { Entreprise } from "../metier/entreprise";
 
@@ -22,9 +21,25 @@ test("test d'ajouter une entreprise + setter", () => {
     expect(e.entreprises[0].nbEmployes).toBe(150)
 })
 
+test("test setter", () => {
+    const e = new DonneesEconomiques()
+    const d = new Entreprise()
+    let tab = [d]
+    e.entreprises = tab
+    expect(e.entreprises).toEqual([{"_code": "6721", "_nbEmployes": 15}])
+})
+
 test("test getter vide", () => {
     const e = new DonneesEconomiques()
     expect(e.entreprises).toHaveLength(0)
+    expect(e.entreprises).toEqual([])
+})
+
+test("test getter", () => {
+    const e = new DonneesEconomiques()
+    const d = new Entreprise()
+    e.ajouteEntreprise(d)
+    expect(e.entreprises).toEqual([{"_code": "6721", "_nbEmployes": 15}])
 })
 
 test("test recuperer code entreprise", () => {
